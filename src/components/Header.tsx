@@ -33,14 +33,14 @@ export default function Header() {
           <a
             href="viber://chat?number=+359899199526"
             className="text-sm font-medium transition-opacity hover:opacity-60"
-            style={{ color: '#7360F2' }}
+            style={{ color: '#8B6F47' }}
           >
             Viber
           </a>
           <a
             href="https://wa.me/359899199526"
             className="text-sm font-medium transition-opacity hover:opacity-60"
-            style={{ color: '#25D366' }}
+            style={{ color: '#7A6A58' }}
           >
             WhatsApp
           </a>

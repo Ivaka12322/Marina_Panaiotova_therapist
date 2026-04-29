@@ -62,7 +62,7 @@ export default function About() {
               {[
                 {
                   img: '/Zlatна_Фирма_2025_image.jpg',
-                  title: 'Zlatna Firma 2025',
+                  title: 'Zlatна Фирма 2025',
                 },
                 {
                   img: '/Орхи_Здраве_2024_&_2025_image.jpg',
