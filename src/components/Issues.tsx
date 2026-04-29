@@ -1,4 +1,4 @@
-import { ChevronRight, Phone } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const issues = [
@@ -54,19 +54,18 @@ export default function Issues() {
               {col.map((item, i) => (
                 <div
                   key={item}
-                  className="flex items-center gap-3 px-6 py-[14px] group cursor-default transition-colors duration-150"
+                  className="flex items-center gap-3 px-6 py-[14px]"
                   style={{
                     borderBottom: i < col.length - 1 ? '1px solid #E0CEB4' : 'none',
                     backgroundColor: '#FDFAF6',
                   }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.backgroundColor = '#F2E8D8'; }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.backgroundColor = '#FDFAF6'; }}
                 >
-                  <ChevronRight
-                    size={14}
-                    className="flex-shrink-0 transition-transform duration-200 group-hover:translate-x-0.5"
+                  <span
+                    className="flex-shrink-0 font-semibold text-lg leading-none"
                     style={{ color: '#A07030' }}
-                  />
+                  >
+                    •
+                  </span>
                   <span className="text-sm lg:text-[15px] font-medium" style={{ color: '#2C1F10' }}>
                     {item}
                   </span>
