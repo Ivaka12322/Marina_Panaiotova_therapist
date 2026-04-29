@@ -132,7 +132,7 @@ export default function About() {
               <div className="space-y-4">
                 {[
                   {
-                    img: '/Zlatна_Фирма_2025_image.jpg',
+                    img: '/Златна_Фирма_2025_image.jpg',
                     title: 'Златна Фирма 2025',
                     sub:   'Сред най-добрите фирми и съветници по клиентски намер',
                   },
