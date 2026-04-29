@@ -4,8 +4,8 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 const locations = [
   {
     city:    'ХАСКОВО',
-    line1:   'Бул. Съединение 98, „Лайф център"',
-    line2:   'ет. 8, ст. 2, офис 42',
+    line1:   'бул. Съединение 10, „Лайф център"',
+    line2:   'вх. В, ет. 2, офис 42',
     primary: true,
   },
   {
