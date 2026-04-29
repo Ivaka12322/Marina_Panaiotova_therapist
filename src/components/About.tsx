@@ -34,13 +34,10 @@ export default function About() {
               <p className="text-[14px] lg:text-[17px]">
                 И в един момент тялото и психиката им просто са започнали да казват: <em style={{ color: '#1A1610' }}>„Повече не мога така."</em>
               </p>
-              <p className="text-[14px] lg:text-[17px]">
-                Затова моят подход не е повсеместен и не е еднакъв за всички. Работя индивидуално, според човека срещу мен — неговата история, неговата чувствителност, неговото темпо.
-              </p>
             </div>
 
-            {/* Credential tags */}
-            <div className="flex flex-wrap gap-2">
+            {/* Credential tags - hidden on mobile, visible on desktop */}
+            <div className="hidden lg:flex flex-wrap gap-2">
               {['Магистър психолог', 'Психоаналитик', 'Сексолог', 'Специалист по електротерапия'].map((tag) => (
                 <span
                   key={tag}
@@ -59,63 +56,125 @@ export default function About() {
 
           {/* Right — awards + CTAs */}
           <div ref={rightRef} className="lg:sticky lg:top-24 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto">
-            <div className="space-y-4">
-              {[
-                {
-                  img: '/Златна_Фирма_2025_image.jpg',
-                  title: 'Златна Фирма 2025',
-                  sub:   'Сред най-добрите фирми и съветници по клиентски намер',
-                },
-                {
-                  img: '/Орхи_Здраве_2024_&_2025_image.jpg',
-                  title: 'Орхи Здраве 2024 & 2025',
-                  sub:   'Лауреат, 1-во място в сектор „Здравеопазване"',
-                },
-              ].map((award) => (
-                <div
-                  key={award.title}
-                  className="flex items-center gap-4 p-5 rounded-2xl border"
-                  style={{ borderColor: '#E0CEB4', backgroundColor: '#FDFAF6' }}
-                >
-                  <div className="w-11 h-11 rounded-lg overflow-hidden flex-shrink-0">
-                    <img src={award.img} alt={award.title} className="w-full h-full object-cover" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="font-semibold text-sm" style={{ color: '#1A1610' }}>{award.title}</p>
-                    <p className="text-xs mt-0.5 truncate" style={{ color: '#7A6A58' }}>{award.sub}</p>
-                  </div>
-                  <Award size={18} className="flex-shrink-0" style={{ color: '#A07030' }} />
+            {/* Mobile: Compact CTA layout */}
+            <div className="space-y-3 lg:hidden mb-6">
+              {/* Golden Firm Badge */}
+              <div
+                className="flex items-center gap-3 p-4 rounded-2xl border"
+                style={{ borderColor: '#E0CEB4', backgroundColor: '#FDFAF6' }}
+              >
+                <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
+                  <img src="/Zlatna_Firma_2025_image.jpg" alt="Златна Фирма 2025" className="w-full h-full object-cover" />
                 </div>
-              ))}
-            </div>
+                <div className="flex-1 min-w-0">
+                  <p className="font-semibold text-sm" style={{ color: '#1A1610' }}>Златна Фирма 2025</p>
+                </div>
+                <Award size={16} className="flex-shrink-0" style={{ color: '#A07030' }} />
+              </div>
 
-            {/* CTAs */}
-            <div className="pt-4 space-y-3">
+              {/* Phone CTA - Full width solid button */}
               <a
                 href="tel:+359899199526"
-                className="flex items-center justify-center gap-3 w-full py-4 px-8 rounded-xl text-white font-semibold text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+                className="flex items-center justify-center gap-3 w-full py-3.5 px-6 rounded-xl text-white font-semibold text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
                 style={{ backgroundColor: '#A07030' }}
               >
-                <Phone size={17} />
+                <Phone size={16} />
                 Обади ми се
               </a>
-              <div className="flex gap-3">
+
+              {/* Social buttons - 2 columns */}
+              <div className="grid grid-cols-2 gap-2.5">
                 <a
                   href="viber://chat?number=+359899199526"
-                  className="flex items-center justify-center gap-2 flex-1 py-3 px-5 rounded-xl text-white text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
-                  style={{ backgroundColor: '#8A7A6A' }}
+                  className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-white text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
+                  style={{ backgroundColor: '#8B6F47' }}
                 >
                   <MessageCircle size={14} />
                   Viber
                 </a>
                 <a
                   href="https://wa.me/359899199526"
-                  className="flex items-center justify-center gap-2 flex-1 py-3 px-5 rounded-xl text-white text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
+                  className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-white text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
                   style={{ backgroundColor: '#7A6A58' }}
                 >
                   <MessageCircle size={14} />
                   WhatsApp
                 </a>
+              </div>
+              <a
+                href="https://www.facebook.com/profile.php?id=61575199230748"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl text-white text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
+                style={{ backgroundColor: '#6B5A48' }}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+                Facebook
+              </a>
+            </div>
+
+            {/* Desktop: Awards + CTAs */}
+            <div className="hidden lg:block">
+              <div className="space-y-4">
+                {[
+                  {
+                    img: '/Zlatna_Firma_2025_image.jpg',
+                    title: 'Златна Фирма 2025',
+                    sub:   'Сред най-добрите фирми и съветници по клиентски намер',
+                  },
+                  {
+                    img: '/Orchids_Health_2024_&_2025_image.jpg',
+                    title: 'Орхи Здраве 2024 & 2025',
+                    sub:   'Лауреат, 1-во място в сектор „Здравеопазване"',
+                  },
+                ].map((award) => (
+                  <div
+                    key={award.title}
+                    className="flex items-center gap-4 p-5 rounded-2xl border"
+                    style={{ borderColor: '#E0CEB4', backgroundColor: '#FDFAF6' }}
+                  >
+                    <div className="w-11 h-11 rounded-lg overflow-hidden flex-shrink-0">
+                      <img src={award.img} alt={award.title} className="w-full h-full object-cover" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-semibold text-sm" style={{ color: '#1A1610' }}>{award.title}</p>
+                      <p className="text-xs mt-0.5 truncate" style={{ color: '#7A6A58' }}>{award.sub}</p>
+                    </div>
+                    <Award size={18} className="flex-shrink-0" style={{ color: '#A07030' }} />
+                  </div>
+                ))}
+              </div>
+
+              {/* Desktop CTAs */}
+              <div className="pt-4 space-y-3">
+                <a
+                  href="tel:+359899199526"
+                  className="flex items-center justify-center gap-3 w-full py-4 px-8 rounded-xl text-white font-semibold text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+                  style={{ backgroundColor: '#A07030' }}
+                >
+                  <Phone size={17} />
+                  Обади ми се
+                </a>
+                <div className="flex gap-3">
+                  <a
+                    href="viber://chat?number=+359899199526"
+                    className="flex items-center justify-center gap-2 flex-1 py-3 px-5 rounded-xl text-white text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
+                    style={{ backgroundColor: '#8B6F47' }}
+                  >
+                    <MessageCircle size={14} />
+                    Viber
+                  </a>
+                  <a
+                    href="https://wa.me/359899199526"
+                    className="flex items-center justify-center gap-2 flex-1 py-3 px-5 rounded-xl text-white text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
+                    style={{ backgroundColor: '#7A6A58' }}
+                  >
+                    <MessageCircle size={14} />
+                    WhatsApp
+                  </a>
+                </div>
               </div>
             </div>
           </div>

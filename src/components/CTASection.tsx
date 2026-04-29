@@ -28,11 +28,7 @@ export default function CTASection() {
             <a
               href="tel:+359899199526"
               className="inline-flex items-center gap-2.5 py-3.5 px-7 rounded-xl font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
-              style={{
-                backgroundColor: 'rgba(253,250,246,0.14)',
-                color: '#FDFAF6',
-                border: '2px solid rgba(253,250,246,0.45)',
-              }}
+              style={{ backgroundColor: '#FDFAF6', color: '#A07030' }}
             >
               <Phone size={15} />
               0899 199 526
@@ -40,7 +36,7 @@ export default function CTASection() {
             <a
               href="viber://chat?number=+359899199526"
               className="inline-flex items-center gap-2.5 py-3.5 px-7 rounded-xl font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
-              style={{ backgroundColor: '#8A7A6A', color: '#fff' }}
+              style={{ backgroundColor: '#8B6F47', color: '#fff' }}
             >
               <MessageCircle size={15} />
               Viber
