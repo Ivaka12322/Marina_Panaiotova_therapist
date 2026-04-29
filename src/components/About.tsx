@@ -61,8 +61,8 @@ export default function About() {
               {/* Awards - mobile compact view */}
               {[
                 {
-                  img: '/Zlatna_Firma_2025_image.jpg',
-                  title: 'Златна Фирма 2025',
+                  img: '/Zlatна_Фирма_2025_image.jpg',
+                  title: 'Zlatna Firma 2025',
                 },
                 {
                   img: '/Орхи_Здраве_2024_&_2025_image.jpg',
@@ -132,7 +132,7 @@ export default function About() {
               <div className="space-y-4">
                 {[
                   {
-                    img: '/Zlatna_Firma_2025_image.jpg',
+                    img: '/Zlatна_Фирма_2025_image.jpg',
                     title: 'Златна Фирма 2025',
                     sub:   'Сред най-добрите фирми и съветници по клиентски намер',
                   },
