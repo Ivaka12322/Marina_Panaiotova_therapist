@@ -61,8 +61,8 @@ export default function About() {
               {/* Awards - mobile compact view */}
               {[
                 {
-                  img: '/Zlatна_Фирма_2025_image.jpg',
-                  title: 'Zlatна Фирма 2025',
+                  img: '/Златна_Фирма_2025_image.jpg',
+                  title: 'Златна Фирма 2025',
                 },
                 {
                   img: '/Орхи_Здраве_2024_&_2025_image.jpg',
