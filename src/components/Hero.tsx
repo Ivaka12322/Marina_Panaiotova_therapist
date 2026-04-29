@@ -61,7 +61,7 @@ export default function Hero() {
             {/* Primary CTA */}
             <a
               href="tel:+359899199526"
-              className="flex items-center justify-center gap-3 py-4 px-8 rounded-xl text-white font-semibold text-base mb-4 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+              className="flex items-center justify-center gap-3 py-4 px-8 rounded-xl text-white font-semibold text-base mb-4 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg mx-auto lg:mx-0"
               style={{ backgroundColor: '#A07030', maxWidth: '440px' }}
             >
               <Phone size={17} />
@@ -69,7 +69,7 @@ export default function Hero() {
             </a>
 
             {/* Social buttons */}
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 lg:gap-3 justify-center lg:justify-start">
               <a
                 href="viber://chat?number=+359899199526"
                 className="flex items-center gap-2 px-6 py-3 rounded-xl text-white text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
