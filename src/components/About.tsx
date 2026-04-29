@@ -58,19 +58,31 @@ export default function About() {
           <div ref={rightRef} className="lg:sticky lg:top-24 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto">
             {/* Mobile: Compact CTA layout */}
             <div className="space-y-3 lg:hidden mb-6">
-              {/* Golden Firm Badge */}
-              <div
-                className="flex items-center gap-3 p-4 rounded-2xl border"
-                style={{ borderColor: '#E0CEB4', backgroundColor: '#FDFAF6' }}
-              >
-                <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
-                  <img src="/Zlatna_Firma_2025_image.jpg" alt="Златна Фирма 2025" className="w-full h-full object-cover" />
+              {/* Awards - mobile compact view */}
+              {[
+                {
+                  img: '/Zlatna_Firma_2025_image.jpg',
+                  title: 'Златна Фирма 2025',
+                },
+                {
+                  img: '/Орхи_Здраве_2024_&_2025_image.jpg',
+                  title: 'Орхи Здраве 2024 & 2025',
+                },
+              ].map((award) => (
+                <div
+                  key={award.title}
+                  className="flex items-center gap-3 p-4 rounded-2xl border"
+                  style={{ borderColor: '#E0CEB4', backgroundColor: '#FDFAF6' }}
+                >
+                  <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
+                    <img src={award.img} alt={award.title} className="w-full h-full object-cover" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="font-semibold text-sm" style={{ color: '#1A1610' }}>{award.title}</p>
+                  </div>
+                  <Award size={16} className="flex-shrink-0" style={{ color: '#A07030' }} />
                 </div>
-                <div className="flex-1 min-w-0">
-                  <p className="font-semibold text-sm" style={{ color: '#1A1610' }}>Златна Фирма 2025</p>
-                </div>
-                <Award size={16} className="flex-shrink-0" style={{ color: '#A07030' }} />
-              </div>
+              ))}
 
               {/* Phone CTA - Full width solid button */}
               <a
@@ -125,7 +137,7 @@ export default function About() {
                     sub:   'Сред най-добрите фирми и съветници по клиентски намер',
                   },
                   {
-                    img: '/Orchids_Health_2024_&_2025_image.jpg',
+                    img: '/Орхи_Здраве_2024_&_2025_image.jpg',
                     title: 'Орхи Здраве 2024 & 2025',
                     sub:   'Лауреат, 1-во място в сектор „Здравеопазване"',
                   },
