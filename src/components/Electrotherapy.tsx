@@ -107,11 +107,11 @@ export default function Electrotherapy() {
   const disclaimerRef = useScrollReveal(80);
 
   return (
-    <section id="electrotherapy" className="py-16 lg:py-24" style={{ backgroundColor: '#1A1610' }}>
+    <section id="electrotherapy" className="py-10 lg:py-16" style={{ backgroundColor: '#1A1610' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
         {/* Header with image */}
-        <div ref={headerRef} className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-14 items-center">
+        <div ref={headerRef} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-10 items-center">
           <div>
             <p className="text-[11px] font-bold tracking-[0.22em] uppercase mb-4" style={{ color: '#C4965A' }}>
               Иновативна технология
@@ -143,7 +143,7 @@ export default function Electrotherapy() {
         {/* Stats */}
         <div
           ref={statsRef}
-          className="grid grid-cols-3 gap-4 lg:gap-8 mb-14 pb-12"
+          className="grid grid-cols-3 gap-4 lg:gap-8 mb-10 pb-8"
           style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}
         >
           {[
@@ -166,7 +166,7 @@ export default function Electrotherapy() {
         </div>
 
         {/* Three mechanisms */}
-        <div ref={mechRef} className="mb-14">
+        <div ref={mechRef} className="mb-10">
           <p className="text-[10px] font-bold tracking-[0.22em] uppercase mb-5" style={{ color: '#C4965A' }}>
             Три механизма на действие
           </p>
@@ -178,7 +178,7 @@ export default function Electrotherapy() {
         </div>
 
         {/* Experience Timeline */}
-        <div ref={timelineRef} className="mb-14">
+        <div ref={timelineRef} className="mb-10">
           <p className="text-[10px] font-bold tracking-[0.22em] uppercase mb-6" style={{ color: '#C4965A' }}>
             Какво ще почувстваш
           </p>
@@ -208,7 +208,7 @@ export default function Electrotherapy() {
         </div>
 
         {/* Benefits */}
-        <div ref={benefitsRef} className="mb-14">
+        <div ref={benefitsRef} className="mb-10">
           <p className="text-[10px] font-bold tracking-[0.22em] uppercase mb-5" style={{ color: '#C4965A' }}>
             Дългосрочни ползи
           </p>

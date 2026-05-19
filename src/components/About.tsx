@@ -20,19 +20,19 @@ export default function About() {
   const rightRef = useScrollReveal(120);
 
   return (
-    <section id="about" className="py-16 lg:py-24" style={{ backgroundColor: '#F8F2E8' }}>
+    <section id="about" className="py-10 lg:py-16" style={{ backgroundColor: '#F8F2E8' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-start">
 
           {/* Left — bio text */}
           <div
             ref={leftRef}
-            className="p-6 lg:p-10 rounded-2xl"
+            className="p-5 lg:p-8 rounded-2xl"
             style={{ backgroundColor: '#FDFAF6', border: '1px solid #E0CEB4' }}
           >
             <h2
-              className="font-serif text-3xl lg:text-5xl font-bold leading-tight mb-6 lg:mb-8"
+              className="font-serif text-3xl lg:text-5xl font-bold leading-tight mb-4 lg:mb-6"
               style={{ color: '#1A1610', fontFamily: 'Playfair Display, serif' }}
             >
               Аз съм{' '}
@@ -51,7 +51,7 @@ export default function About() {
               />
             </div>
 
-            <div className="space-y-4 mb-6 lg:mb-9" style={{ color: '#4A3D30', lineHeight: '1.85' }}>
+            <div className="space-y-3 mb-5 lg:mb-7" style={{ color: '#4A3D30', lineHeight: '1.85' }}>
               {bioText.map((para, i) => (
                 <p key={i} className="text-[14px] lg:text-[16px]">
                   {para}
@@ -81,7 +81,7 @@ export default function About() {
           <div ref={rightRef} className="lg:sticky lg:top-24 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto">
 
             {/* Photo — desktop only */}
-            <div className="hidden lg:block mb-6 rounded-2xl overflow-hidden shadow-lg">
+            <div className="hidden lg:block mb-6 rounded-2xl overflow-hidden">
               <img
                 src="/image.png"
                 alt="Марина Панайотова"
@@ -167,8 +167,8 @@ export default function About() {
                 ].map((award) => (
                   <div
                     key={award.title}
-                    className="flex items-center gap-4 p-5 rounded-2xl border"
-                    style={{ borderColor: '#E0CEB4', backgroundColor: '#FDFAF6' }}
+                    className="flex items-center gap-4 p-5 rounded-2xl"
+                    style={{ border: '1px solid #E0CEB4', backgroundColor: '#FDFAF6' }}
                   >
                     <div className="w-11 h-11 rounded-lg overflow-hidden flex-shrink-0">
                       <img src={award.img} alt={award.title} className="w-full h-full object-cover" />

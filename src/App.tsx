@@ -3,7 +3,6 @@ import Hero from './components/Hero';
 import SectionSeparator from './components/SectionSeparator';
 import About from './components/About';
 import HowIHelp from './components/HowIHelp';
-import Issues from './components/Issues';
 import Electrotherapy from './components/Electrotherapy';
 import ConcreteProblems from './components/ConcreteProblems';
 import CalmOverride from './components/CalmOverride';
@@ -24,9 +23,8 @@ export default function App() {
         <SectionSeparator />
         <About />
         <HowIHelp />
-        <Issues />
-        <Electrotherapy />
         <ConcreteProblems />
+        <Electrotherapy />
         <CalmOverride />
         <Books />
         <YoungTherapistAcademy />

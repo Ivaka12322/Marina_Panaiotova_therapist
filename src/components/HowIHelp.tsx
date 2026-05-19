@@ -91,7 +91,7 @@ function ExpandableCard({ card, delay }: { card: Card; delay: number }) {
       }}
     >
       <button
-        className="w-full text-left p-7 lg:p-8 flex items-start justify-between gap-4 hover:bg-amber-50 transition-colors duration-200"
+        className="w-full text-left p-5 lg:p-6 flex items-start justify-between gap-4 hover:bg-amber-50 transition-colors duration-200"
         style={{ '--tw-bg-opacity': '1' } as React.CSSProperties}
         onClick={() => setOpen(o => !o)}
         aria-expanded={open}
@@ -128,7 +128,7 @@ function ExpandableCard({ card, delay }: { card: Card; delay: number }) {
         className="overflow-hidden transition-all duration-300 ease-in-out"
         style={{ maxHeight: open ? '600px' : '0' }}
       >
-        <div className="px-7 lg:px-8 pb-7 lg:pb-8">
+        <div className="px-5 lg:px-6 pb-5 lg:pb-6">
           <div style={{ borderTop: '1px solid #E8D8C0', paddingTop: '20px' }}>
             <p
               className="text-sm lg:text-[15px] mb-5"
@@ -164,10 +164,10 @@ export default function HowIHelp() {
   const headerRef = useScrollReveal(0);
 
   return (
-    <section id="how" className="py-24 lg:py-32" style={{ backgroundColor: '#F2E8D8' }}>
+    <section id="how" className="py-12 lg:py-20" style={{ backgroundColor: '#F2E8D8' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-        <div ref={headerRef} className="mb-14">
+        <div ref={headerRef} className="mb-8">
           <p className="text-[11px] font-bold tracking-[0.22em] uppercase mb-5" style={{ color: '#A07030' }}>
             С какво мога да ти помогна
           </p>
@@ -185,7 +185,7 @@ export default function HowIHelp() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
           {cards.map((card, i) => (
             <ExpandableCard key={card.num} card={card} delay={Math.min(i * 55, 300)} />
           ))}

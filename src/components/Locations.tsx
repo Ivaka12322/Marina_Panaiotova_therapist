@@ -21,10 +21,10 @@ export default function Locations() {
   const cardsRef  = useScrollReveal(140);
 
   return (
-    <section id="locations" className="py-16 lg:py-24" style={{ backgroundColor: '#2C2520' }}>
+    <section id="locations" className="py-10 lg:py-16" style={{ backgroundColor: '#2C2520' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-        <div ref={headerRef} className="mb-14">
+        <div ref={headerRef} className="mb-8">
           <p className="text-[11px] font-bold tracking-[0.22em] uppercase mb-5" style={{ color: '#C4965A' }}>
             Кабинети
           </p>

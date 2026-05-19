@@ -37,10 +37,10 @@ export default function Books() {
   const cardRefs = [b0, b1];
 
   return (
-    <section id="books" className="py-24 lg:py-32" style={{ backgroundColor: '#F8F2E8' }}>
+    <section id="books" className="py-12 lg:py-20" style={{ backgroundColor: '#F8F2E8' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-        <div ref={headerRef} className="mb-14">
+        <div ref={headerRef} className="mb-8">
           <p className="text-[11px] font-bold tracking-[0.22em] uppercase mb-5" style={{ color: '#A07030' }}>
             Публикации
           </p>
@@ -69,12 +69,12 @@ export default function Books() {
               {/* Book image */}
               <div
                 className="relative overflow-hidden"
-                style={{ backgroundColor: '#F0E6D4', aspectRatio: '16/9' }}
+                style={{ backgroundColor: '#F0E6D4', aspectRatio: '16/7' }}
               >
                 <img
                   src={book.image}
                   alt={book.imageAlt}
-                  className="w-full h-full object-contain p-8"
+                  className="w-full h-full object-contain p-4 lg:p-8"
                   loading="lazy"
                 />
                 <div
@@ -84,42 +84,42 @@ export default function Books() {
               </div>
 
               {/* Content */}
-              <div className="p-7 lg:p-8">
+              <div className="p-4 lg:p-8">
                 <span
-                  className="inline-block text-xs font-bold tracking-wide uppercase mb-4 px-3 py-1 rounded-full"
+                  className="inline-block text-[10px] lg:text-xs font-bold tracking-wide uppercase mb-2.5 px-2.5 py-0.5 rounded-full"
                   style={book.badgeStyle}
                 >
                   {book.badge}
                 </span>
 
                 <h3
-                  className="font-serif text-xl lg:text-2xl font-bold mb-2 leading-snug"
+                  className="font-serif text-lg lg:text-2xl font-bold mb-1.5 leading-snug"
                   style={{ color: '#1A1610', fontFamily: 'Playfair Display, serif' }}
                 >
                   {book.title}
                 </h3>
-                <p className="text-sm mb-5 font-medium" style={{ color: '#A07030', lineHeight: '1.5' }}>
+                <p className="text-xs lg:text-sm mb-3 font-medium" style={{ color: '#A07030', lineHeight: '1.5' }}>
                   {book.subtitle}
                 </p>
 
-                <div className="space-y-3 mb-7">
+                <div className="space-y-2 mb-4">
                   {book.desc.map((p, j) => (
-                    <p key={j} className="text-sm" style={{ color: '#6B5A48', lineHeight: '1.78' }}>
+                    <p key={j} className="text-xs lg:text-sm" style={{ color: '#6B5A48', lineHeight: '1.7' }}>
                       {p}
                     </p>
                   ))}
                 </div>
 
-                <div style={{ borderTop: '1px solid #E0CEB4', paddingTop: '20px' }}>
+                <div style={{ borderTop: '1px solid #E0CEB4', paddingTop: '12px' }}>
                   <a
                     href="viber://chat?number=+359899199526"
-                    className="inline-flex items-center gap-2.5 py-3 px-6 rounded-xl font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
+                    className="inline-flex items-center gap-2 py-2.5 px-5 rounded-xl font-semibold text-xs lg:text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
                     style={{ backgroundColor: '#A07030', color: '#FFFFFF' }}
                   >
-                    <MessageCircle size={15} />
+                    <MessageCircle size={13} />
                     Поръчай чрез Viber
                   </a>
-                  <p className="text-xs mt-3" style={{ color: '#9A8A72' }}>
+                  <p className="text-xs mt-2" style={{ color: '#9A8A72' }}>
                     Продава се изцяло онлайн
                   </p>
                 </div>

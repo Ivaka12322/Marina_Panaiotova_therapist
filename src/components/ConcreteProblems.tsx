@@ -108,10 +108,10 @@ export default function ConcreteProblems() {
   const noteRef   = useScrollReveal(180);
 
   return (
-    <section id="concrete-problems" className="py-24 lg:py-32" style={{ backgroundColor: '#F8F2E8' }}>
+    <section id="concrete-problems" className="py-12 lg:py-20" style={{ backgroundColor: '#F8F2E8' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-        <div ref={headerRef} className="mb-14">
+        <div ref={headerRef} className="mb-8">
           <p className="text-[11px] font-bold tracking-[0.22em] uppercase mb-5" style={{ color: '#A07030' }}>
             Невро-стимулираща терапия
           </p>

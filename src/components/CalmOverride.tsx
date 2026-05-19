@@ -16,11 +16,11 @@ export default function CalmOverride() {
   const programRef = useScrollReveal(160);
 
   return (
-    <section id="calm-override" className="py-24 lg:py-32" style={{ backgroundColor: '#F2E8D8' }}>
+    <section id="calm-override" className="py-12 lg:py-20" style={{ backgroundColor: '#F2E8D8' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
         {/* Header area */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 mb-10 items-center">
           <div ref={headerRef}>
             <div
               className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase mb-5 px-3 py-1.5 rounded-full"
@@ -51,9 +51,9 @@ export default function CalmOverride() {
           <div ref={imageRef}>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/Hero_image.jpg"
-                alt="Терапевтичен кабинет — Марина Панайотова"
-                className="w-full object-cover"
+                src="/Picture_with_sofa.jpg"
+                alt="Марина Панайотова — Calm Override"
+                className="w-full object-cover object-center"
                 style={{ aspectRatio: '3/4' }}
               />
               <div
@@ -82,36 +82,36 @@ export default function CalmOverride() {
           style={{ border: '1px solid #D4B87A', backgroundColor: '#FDFAF6' }}
         >
           <div
-            className="px-8 py-5 lg:px-10"
+            className="px-5 py-3 lg:px-10 lg:py-5"
             style={{ backgroundColor: 'rgba(160,112,48,0.08)', borderBottom: '1px solid #E0CEB4' }}
           >
-            <p className="text-[11px] font-bold tracking-[0.22em] uppercase" style={{ color: '#A07030' }}>
+            <p className="text-[10px] font-bold tracking-[0.22em] uppercase" style={{ color: '#A07030' }}>
               Онлайн програма
             </p>
           </div>
 
-          <div className="p-8 lg:p-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div className="p-5 lg:p-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-start">
               <div>
                 <h3
-                  className="font-serif text-2xl lg:text-3xl font-bold mb-2 leading-tight"
+                  className="font-serif text-xl lg:text-3xl font-bold mb-1.5 leading-tight"
                   style={{ color: '#1A1610', fontFamily: 'Playfair Display, serif' }}
                 >
                   Calm Override Mastery
                 </h3>
-                <p className="text-sm mb-6" style={{ color: '#A07030' }}>
+                <p className="text-xs lg:text-sm mb-4" style={{ color: '#A07030' }}>
                   Структурирана програма за трайно освобождаване от тревожност
                 </p>
-                <ul className="space-y-3">
+                <ul className="space-y-2">
                   {features.map((f, i) => (
-                    <li key={i} className="flex items-start gap-3">
+                    <li key={i} className="flex items-start gap-2.5">
                       <span
-                        className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5"
+                        className="flex-shrink-0 w-4 h-4 rounded-full flex items-center justify-center mt-0.5"
                         style={{ backgroundColor: 'rgba(160,112,48,0.12)', color: '#A07030' }}
                       >
-                        <Check size={11} />
+                        <Check size={9} />
                       </span>
-                      <span className="text-sm lg:text-[15px]" style={{ color: '#6B5A48', lineHeight: '1.7' }}>
+                      <span className="text-xs lg:text-[15px]" style={{ color: '#6B5A48', lineHeight: '1.6' }}>
                         {f}
                       </span>
                     </li>
@@ -120,30 +120,30 @@ export default function CalmOverride() {
               </div>
 
               <div className="lg:pt-8">
-                <p className="text-sm mb-6" style={{ color: '#8B7A60', lineHeight: '1.75' }}>
+                <p className="text-xs lg:text-sm mb-4" style={{ color: '#8B7A60', lineHeight: '1.75' }}>
                   Свържи се с мен за повече информация за програмата и условията за включване.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-3">
+                <div className="flex flex-row gap-2.5">
                   <a
                     href="viber://chat?number=+359899199526"
-                    className="inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+                    className="inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-semibold text-xs lg:text-sm flex-1 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
                     style={{ backgroundColor: '#7360F2', color: '#FFFFFF' }}
                   >
-                    <MessageCircle size={16} />
+                    <MessageCircle size={14} />
                     Viber
                   </a>
                   <a
                     href="https://wa.me/359899199526"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+                    className="inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-semibold text-xs lg:text-sm flex-1 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
                     style={{ backgroundColor: '#25D366', color: '#FFFFFF' }}
                   >
-                    <MessageCircle size={16} />
+                    <MessageCircle size={14} />
                     WhatsApp
                   </a>
                 </div>
-                <p className="text-xs mt-4" style={{ color: '#9A8A72' }}>
+                <p className="text-xs mt-3" style={{ color: '#9A8A72' }}>
                   0899 199 526&nbsp;·&nbsp;09:00–17:00 ч.
                 </p>
               </div>

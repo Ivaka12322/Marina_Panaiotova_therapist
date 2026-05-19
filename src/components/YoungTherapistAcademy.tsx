@@ -16,11 +16,11 @@ export default function YoungTherapistAcademy() {
   const ctaRef     = useScrollReveal(240);
 
   return (
-    <section id="academy" className="py-24 lg:py-32" style={{ backgroundColor: '#F2E8D8' }}>
+    <section id="academy" className="py-12 lg:py-20" style={{ backgroundColor: '#F2E8D8' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
         {/* Header */}
-        <div ref={headerRef} className="mb-12">
+        <div ref={headerRef} className="mb-8">
           <div
             className="inline-flex items-center text-xs font-bold tracking-widest uppercase mb-5 px-3 py-1.5 rounded-full"
             style={{ backgroundColor: 'rgba(160,112,48,0.12)', color: '#A07030', border: '1px solid rgba(160,112,48,0.22)' }}
@@ -41,7 +41,7 @@ export default function YoungTherapistAcademy() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-start">
 
           {/* Left — body text */}
           <div ref={bodyRef}>

@@ -78,10 +78,10 @@ export default function FAQ() {
   const listRef   = useScrollReveal(140);
 
   return (
-    <section id="faq" className="py-24 lg:py-32" style={{ backgroundColor: '#F8F2E8' }}>
+    <section id="faq" className="py-12 lg:py-20" style={{ backgroundColor: '#F8F2E8' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col items-center">
 
-        <div ref={headerRef} className="mb-14 text-center">
+        <div ref={headerRef} className="mb-8 text-center">
           <p className="text-[11px] font-bold tracking-[0.22em] uppercase mb-5" style={{ color: '#A07030' }}>
             Въпроси
           </p>

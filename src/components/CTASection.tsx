@@ -5,7 +5,7 @@ export default function CTASection() {
   const ref = useScrollReveal(0);
 
   return (
-    <section id="contact" className="py-24 lg:py-32" style={{ backgroundColor: '#A07030' }}>
+    <section id="contact" className="py-12 lg:py-20" style={{ backgroundColor: '#A07030' }}>
       <div className="max-w-4xl mx-auto px-6 lg:px-10 text-center">
         <div ref={ref}>
           <h2
