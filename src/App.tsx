@@ -8,8 +8,8 @@ import Electrotherapy from './components/Electrotherapy';
 import ConcreteProblems from './components/ConcreteProblems';
 import CalmOverride from './components/CalmOverride';
 import Books from './components/Books';
+import YoungTherapistAcademy from './components/YoungTherapistAcademy';
 import Locations from './components/Locations';
-import Reviews from './components/Reviews';
 import FAQ from './components/FAQ';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
@@ -29,8 +29,8 @@ export default function App() {
         <ConcreteProblems />
         <CalmOverride />
         <Books />
+        <YoungTherapistAcademy />
         <Locations />
-        <Reviews />
         <FAQ />
         <CTASection />
       </main>
