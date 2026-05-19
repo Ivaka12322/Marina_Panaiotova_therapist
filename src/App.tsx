@@ -5,6 +5,9 @@ import About from './components/About';
 import HowIHelp from './components/HowIHelp';
 import Issues from './components/Issues';
 import Electrotherapy from './components/Electrotherapy';
+import ConcreteProblems from './components/ConcreteProblems';
+import CalmOverride from './components/CalmOverride';
+import Books from './components/Books';
 import Locations from './components/Locations';
 import Reviews from './components/Reviews';
 import FAQ from './components/FAQ';
@@ -23,6 +26,9 @@ export default function App() {
         <HowIHelp />
         <Issues />
         <Electrotherapy />
+        <ConcreteProblems />
+        <CalmOverride />
+        <Books />
         <Locations />
         <Reviews />
         <FAQ />

@@ -1,27 +1,49 @@
-import { Phone, Brain, Shield, Heart, Activity, Zap } from 'lucide-react';
+import { useState } from 'react';
+import { Phone, Brain, Shield, Heart, Activity, Zap, Plus, Minus, Moon, Sunrise, TrendingUp, Check } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
-const brainSteps = [
+const mechanisms = [
   {
     num: '01',
-    title: 'Прекъсва тревожния ритъм',
-    desc:  'Pитмичната стимулация променя доминиращата електрическа активност на мозъка и го извежда от хронично свръхвъзбудено състояние.',
+    title: 'Увличане на мозъчни вълни',
+    desc: 'Чрез специални очила с вградени светодиоди и слушалки към мозъка се подават ритмични светлинни и звукови импулси. Мозъкът синхронизира собствената си електрическа активност с тези ритми, преминавайки в желаното функционално състояние.',
   },
   {
     num: '02',
-    title: 'Създава нови невронни връзки',
-    desc:  'Стимулира невропластичността — мозъкът изгражда нови, по-здрави пътища на комуникация. Здравата комуникация между мозъчните центрове води до трайно намаляване и изчезване на симптомите.',
+    title: 'Нови невронни връзки',
+    desc: 'Технологията стимулира невропластичността — способността на мозъка да изгражда нови невронни мрежи и да заменя автоматичните негативни реакции с нови, балансирани модели на поведение и мислене.',
   },
   {
     num: '03',
-    title: 'Повдига прага на чувствителност',
-    desc:  'Нервната система спира да реагира на всяко предизвикателство като на заплаха. Емоциите се преработват, вместо да се поглъщат навътре.',
+    title: 'Невротрансмитери и баланс',
+    desc: 'Нормализират се серотонинът, ендорфините и мелатонинът. Активира се парасимпатиковата нервна система — режимът на почивка, лечение и клетъчна регенерация, вместо постоянния режим на стрес.',
+  },
+];
+
+const timeline = [
+  {
+    icon: <Moon size={18} />,
+    label: 'По време на процедурата',
+    text: 'Лягаш или сядаш удобно. Поставяш очилата и слушалките. Затваряш очи. Нежни, ритмично пулсиращи светлинни и звукови импулси започват да те обгръщат. Дишането се забавя. Мускулите се отпускат от главата до пръстите. Дълбок покой, подобен на медитация без усилие — топлина, разливаща се в тялото. Лека приятна сънливост. Пълно отдалечаване от ежедневните мисли.',
   },
   {
-    num: '04',
-    title: 'Естествено производство на серотонин, ендорфини и мелатонин',
-    desc:  'Тялото само произвежда веществата, от които се е нуждаело — без медикаменти, с дълготраен и устойчив ефект.',
+    icon: <Sunrise size={18} />,
+    label: 'След процедурата',
+    text: 'Освеженост. Лекота. Намалено напрежение. Яснота на мисълта. Чувство за вътрешен покой, който се задържа дълго след сесията.',
   },
+  {
+    icon: <TrendingUp size={18} />,
+    label: 'Дългосрочни резултати',
+    text: 'След всяка следваща терапия тези усещания се връщат с по-голяма сила, тялото започва да запомня как е да му е добре. Резултатите се натрупват сесия след сесия: първо отшумяват психосоматичните симптоми, после мислите стават по-редки и по-слаби, докато тревожността не избледнее напълно.',
+  },
+];
+
+const benefits = [
+  'По-дълбок и непрекъснат сън',
+  'Намалена честота и интензивност на тревожността',
+  'Подобрено настроение и мотивация',
+  'По-добра памет и концентрация',
+  'Намалена нужда от болкоуспокояващи и седативи',
 ];
 
 const changes = [
@@ -32,60 +54,90 @@ const changes = [
   { icon: <Zap size={15} />,      text: 'Резултатите са дълготрайни — новите невронни връзки остават' },
 ];
 
-const phases = [
-  {
-    label: 'ПРЕДИ СТАРТА',
-    title: 'Удобно настаняване',
-    desc:  'Лягаш удобно. Слушалки, светлинни очила, при нужда — леки клипсове. Нищо болезнено.',
-  },
-  {
-    label: 'ПЪРВИТЕ МИНУТИ',
-    title: 'Ритмична стимулация',
-    desc:  'Меки звукови пулсации и деликатни светлинни импулси. Някои виждат цветове — нормална реакция.',
-  },
-  {
-    label: 'СЛЕД 6–8 МИНУТИ',
-    title: 'Мислите утихват',
-    desc:  'Вътрешният диалог отслабва. Тревожните мисли се отдалечават. Тялото натежава приятно.',
-  },
-  {
-    label: 'В ХОДА',
-    title: 'Дълбока тишина',
-    desc:  'Сърцето се успокоява. Настъпва вътрешна тишина и усещане за безопасност. Някои заспиват.',
-  },
-];
+function MechanismCard({ item }: { item: typeof mechanisms[0] }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div
+      className="rounded-xl overflow-hidden transition-all duration-300"
+      style={{
+        border: `1px solid ${open ? 'rgba(196,150,90,0.5)' : 'rgba(255,255,255,0.08)'}`,
+        backgroundColor: open ? 'rgba(196,150,90,0.07)' : 'rgba(255,255,255,0.03)',
+      }}
+    >
+      <button
+        className="w-full text-left px-5 py-4 flex items-center justify-between gap-3"
+        onClick={() => setOpen(o => !o)}
+        aria-expanded={open}
+      >
+        <div className="flex items-center gap-4">
+          <span
+            className="font-serif text-2xl font-bold flex-shrink-0"
+            style={{ color: 'rgba(196,150,90,0.4)', fontFamily: 'Playfair Display, serif' }}
+          >
+            {item.num}
+          </span>
+          <span className="font-semibold text-sm" style={{ color: '#F8F2E8' }}>{item.title}</span>
+        </div>
+        <span
+          className="flex-shrink-0 w-7 h-7 flex items-center justify-center rounded-full transition-colors duration-200"
+          style={{ color: '#C4965A', backgroundColor: open ? 'rgba(196,150,90,0.15)' : 'transparent' }}
+        >
+          {open ? <Minus size={13} /> : <Plus size={13} />}
+        </span>
+      </button>
+      <div
+        className="overflow-hidden transition-all duration-300 ease-in-out"
+        style={{ maxHeight: open ? '300px' : '0' }}
+      >
+        <p className="px-5 pb-5 text-xs lg:text-sm" style={{ color: '#A09080', lineHeight: '1.75' }}>
+          {item.desc}
+        </p>
+      </div>
+    </div>
+  );
+}
 
 export default function Electrotherapy() {
   const headerRef     = useScrollReveal(0);
   const statsRef      = useScrollReveal(80);
-  const contentRef    = useScrollReveal(100);
+  const mechRef       = useScrollReveal(100);
+  const timelineRef   = useScrollReveal(80);
+  const benefitsRef   = useScrollReveal(80);
   const changesRef    = useScrollReveal(80);
-  const caseCardsRef  = useScrollReveal(80);
-  const phasesRef     = useScrollReveal(80);
   const disclaimerRef = useScrollReveal(80);
 
   return (
-    <section id="electrotherapy" className="py-16 lg:py-20" style={{ backgroundColor: '#1A1610' }}>
+    <section id="electrotherapy" className="py-16 lg:py-24" style={{ backgroundColor: '#1A1610' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-        {/* Header */}
-        <div ref={headerRef} className="mb-12">
-          <p className="text-[11px] font-bold tracking-[0.22em] uppercase mb-4" style={{ color: '#C4965A' }}>
-            Електротерапия
-          </p>
-          <h2
-            className="font-serif text-3xl lg:text-4xl font-bold leading-tight mb-5"
-            style={{ color: '#F8F2E8', fontFamily: 'Playfair Display, serif' }}
-          >
-            Тревожността може да бъде<br />
-            <span className="italic" style={{ color: '#C4965A' }}>изключена от корена</span>
-          </h2>
-          <p
-            className="text-sm lg:text-base max-w-2xl"
-            style={{ color: '#A09080', lineHeight: '1.75' }}
-          >
-            Неинвазивна аудио-визуална и кранио-електростимулация, която създава нови невронни връзки в мозъка, прекъсва веригата на тревожността и позволява на нервната система да функционира нормално.
-          </p>
+        {/* Header with image */}
+        <div ref={headerRef} className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-14 items-center">
+          <div>
+            <p className="text-[11px] font-bold tracking-[0.22em] uppercase mb-4" style={{ color: '#C4965A' }}>
+              Иновативна технология
+            </p>
+            <h2
+              className="font-serif text-3xl lg:text-4xl font-bold leading-tight mb-5"
+              style={{ color: '#F8F2E8', fontFamily: 'Playfair Display, serif' }}
+            >
+              Невро-Стимулираща<br />
+              <span className="italic" style={{ color: '#C4965A' }}>Терапия</span>
+            </h2>
+            <p
+              className="text-sm lg:text-base"
+              style={{ color: '#A09080', lineHeight: '1.8' }}
+            >
+              Неинвазивна аудио-визуална и кранио-електрическа стимулация, изследвана клинично от 1984 г. в над 100 научни публикации по света. Без медикаменти, без болка, без странични ефекти.
+            </p>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-2xl">
+            <img
+              src="/Brain_scan_image.jpg"
+              alt="Невро-стимулираща терапия"
+              className="w-full object-cover"
+              style={{ aspectRatio: '4/3' }}
+            />
+          </div>
         </div>
 
         {/* Stats */}
@@ -113,48 +165,73 @@ export default function Electrotherapy() {
           ))}
         </div>
 
-        {/* How it works in the brain + photo */}
-        <div
-          ref={contentRef}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-14 items-start"
-        >
-          <div>
-            <p className="text-[10px] font-bold tracking-[0.22em] uppercase mb-5" style={{ color: '#C4965A' }}>
-              Как работи в мозъка
-            </p>
-            <div className="space-y-5">
-              {brainSteps.map((step) => (
-                <div key={step.num} className="flex gap-3">
-                  <span
-                    className="font-serif text-xs font-bold flex-shrink-0 mt-0"
-                    style={{ color: '#C4965A', fontFamily: 'Playfair Display, serif', minWidth: '22px' }}
-                  >
-                    {step.num}
-                  </span>
-                  <div>
-                    <h4 className="font-semibold text-xs mb-1" style={{ color: '#F8F2E8' }}>
-                      {step.title}
-                    </h4>
-                    <p className="text-xs" style={{ color: '#7A6A5A', lineHeight: '1.6' }}>
-                      {step.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="rounded-2xl overflow-hidden shadow-2xl">
-            <img
-              src="/Brain_scan_image.jpg"
-              alt="Мозъчна сканиране — електротерапия"
-              className="w-full object-cover"
-              style={{ aspectRatio: '4/3' }}
-            />
+        {/* Three mechanisms */}
+        <div ref={mechRef} className="mb-14">
+          <p className="text-[10px] font-bold tracking-[0.22em] uppercase mb-5" style={{ color: '#C4965A' }}>
+            Три механизма на действие
+          </p>
+          <div className="space-y-3">
+            {mechanisms.map((m) => (
+              <MechanismCard key={m.num} item={m} />
+            ))}
           </div>
         </div>
 
-        {/* What changes after */}
+        {/* Experience Timeline */}
+        <div ref={timelineRef} className="mb-14">
+          <p className="text-[10px] font-bold tracking-[0.22em] uppercase mb-6" style={{ color: '#C4965A' }}>
+            Какво ще почувстваш
+          </p>
+          <div className="space-y-4">
+            {timeline.map((item, i) => (
+              <div
+                key={i}
+                className="p-5 lg:p-6 rounded-xl flex gap-5 items-start"
+                style={{
+                  backgroundColor: 'rgba(255,255,255,0.03)',
+                  border: '1px solid rgba(255,255,255,0.07)',
+                }}
+              >
+                <div
+                  className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mt-0.5"
+                  style={{ backgroundColor: 'rgba(196,150,90,0.12)', color: '#C4965A' }}
+                >
+                  {item.icon}
+                </div>
+                <div>
+                  <p className="font-semibold text-sm mb-2" style={{ color: '#F8F2E8' }}>{item.label}</p>
+                  <p className="text-xs lg:text-sm" style={{ color: '#8A7A6A', lineHeight: '1.78' }}>{item.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Benefits */}
+        <div ref={benefitsRef} className="mb-14">
+          <p className="text-[10px] font-bold tracking-[0.22em] uppercase mb-5" style={{ color: '#C4965A' }}>
+            Дългосрочни ползи
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {benefits.map((b, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-3 px-4 py-3 rounded-lg"
+                style={{ backgroundColor: 'rgba(196,150,90,0.06)', border: '1px solid rgba(196,150,90,0.14)' }}
+              >
+                <span
+                  className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center"
+                  style={{ backgroundColor: 'rgba(196,150,90,0.2)', color: '#C4965A' }}
+                >
+                  <Check size={11} />
+                </span>
+                <p className="text-xs lg:text-sm" style={{ color: '#C4B49A' }}>{b}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* What changes */}
         <div ref={changesRef} className="mb-12">
           <p className="text-[10px] font-bold tracking-[0.22em] uppercase mb-4" style={{ color: '#C4965A' }}>
             Какво се променя след процедурите
@@ -176,59 +253,14 @@ export default function Electrotherapy() {
           </div>
         </div>
 
-        {/* Use case cards */}
-        <div ref={caseCardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-          {[
-            {
-              title: 'При спиране на антидепресанти',
-              body:  'Симптомите на отнемане са по-леки при клиенти, работещи с електротерапия паралелно. Нервната система получава подкрепа точно когато медикаментът се оттегля.',
-            },
-            {
-              title: 'При зависимости и абстиненция',
-              body:  'Електротерапията стимулира естественото производство на ендорфини и серотонин. Абстиненцията протича по-леко, нервната система се стабилизира бързо.',
-            },
-          ].map((card) => (
-            <div
-              key={card.title}
-              className="p-5 rounded-xl"
-              style={{ border: '1px solid rgba(196,150,90,0.28)', backgroundColor: 'rgba(196,150,90,0.06)' }}
-            >
-              <h4 className="font-semibold text-sm mb-2" style={{ color: '#F8F2E8' }}>{card.title}</h4>
-              <p className="text-xs" style={{ color: '#7A6A5A', lineHeight: '1.6' }}>{card.body}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Phases timeline */}
-        <div ref={phasesRef} className="mb-10">
-          <p className="text-[10px] font-bold tracking-[0.22em] uppercase mb-5" style={{ color: '#C4965A' }}>
-            Какво ще почувстваш
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-            {phases.map((phase) => (
-              <div
-                key={phase.label}
-                className="p-4 rounded-lg"
-                style={{ backgroundColor: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.07)' }}
-              >
-                <p className="text-[9px] font-bold tracking-[0.18em] mb-2" style={{ color: '#C4965A' }}>
-                  {phase.label}
-                </p>
-                <h4 className="font-semibold text-xs mb-2" style={{ color: '#F8F2E8' }}>{phase.title}</h4>
-                <p className="text-xs" style={{ color: '#6A5A4A', lineHeight: '1.5' }}>{phase.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Disclaimer */}
         <div
           ref={disclaimerRef}
-          className="mb-8 p-4 rounded-lg"
+          className="mb-8 p-5 rounded-xl"
           style={{ backgroundColor: 'rgba(196,150,90,0.09)', border: '1px solid rgba(196,150,90,0.22)' }}
         >
-          <p className="text-xs" style={{ color: '#A09070', lineHeight: '1.6' }}>
-            <strong style={{ color: '#C4965A' }}>Важно:</strong> Не замества психотерапията. Не се препоръчва при епилепсия, травма и бременност.
+          <p className="text-xs lg:text-sm" style={{ color: '#A09070', lineHeight: '1.7' }}>
+            <strong style={{ color: '#C4965A' }}>Важно:</strong> Процедурата е неинвазивна, безболезнена и без странични ефекти. Прилага се само след индивидуална консултация. Не се препоръчва при: епилепсия, остра фаза след мозъчна травма или инсулт (до 1 месец), активна психоза и бременност.
           </p>
         </div>
 
