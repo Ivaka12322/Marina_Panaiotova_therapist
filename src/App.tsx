@@ -10,10 +10,11 @@ import Reviews from './components/Reviews';
 import FAQ from './components/FAQ';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
+import StickyBar from './components/StickyBar';
 
 export default function App() {
   return (
-    <div className="font-sans">
+    <div className="font-sans pb-12">
       <Header />
       <main>
         <Hero />
@@ -28,6 +29,7 @@ export default function App() {
         <CTASection />
       </main>
       <Footer />
+      <StickyBar />
     </div>
   );
 }

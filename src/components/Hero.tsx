@@ -29,33 +29,24 @@ export default function Hero() {
             </p>
 
             <h1
-              className="font-serif text-5xl lg:text-6xl xl:text-[5rem] font-bold leading-[1.07] mb-2"
+              className="font-serif text-3xl lg:text-4xl xl:text-[2.8rem] font-bold leading-[1.15] mb-6"
               style={{ color: '#1A1610', fontFamily: 'Playfair Display, serif' }}
             >
-              Марина<br />Панайотова
+              Превръщам паниката, тревожността и натрапчивите мисли в стабилност и увереност — без лекарства
             </h1>
-
-            <p
-              className="font-serif text-3xl lg:text-4xl italic mb-7"
-              style={{ color: '#A07030', fontFamily: 'Playfair Display, serif' }}
-            >
-              психотерапевт
-            </p>
 
             <p
               className="text-[11px] font-bold tracking-[0.2em] uppercase mb-9"
               style={{ color: '#7A6A58' }}
             >
-              Магистър психолог&nbsp;·&nbsp;Психоаналитик&nbsp;·&nbsp;Сексолог
+              Магистър психолог&nbsp;·&nbsp;Психотерапевт&nbsp;·&nbsp;Психоаналитик&nbsp;·&nbsp;Сексолог
             </p>
 
             <p
               className="text-base lg:text-[17px] mb-10 max-w-[420px]"
               style={{ color: '#4A3D30', lineHeight: '1.8' }}
             >
-              От над 6 години работя с хора, които отвън изглеждат силни и
-              събрани, а отвътре живеят с тревожност, вътрешно напрежение и
-              психично изтощение.
+              Психотерапевтични консултации и иновативна невро-стимулираща терапия, за ума и мозъка едновременно.
             </p>
 
             {/* Primary CTA */}

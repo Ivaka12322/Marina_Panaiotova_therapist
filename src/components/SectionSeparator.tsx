@@ -22,7 +22,7 @@ export default function SectionSeparator() {
           </p>
         </div>
 
-        {/* Desktop: 4 items */}
+        {/* Desktop: 2 items */}
         <div className="hidden lg:flex items-center justify-center gap-0 text-center">
           <p
             className="text-xs font-semibold tracking-[0.15em] uppercase px-8 flex-1"
@@ -36,20 +36,6 @@ export default function SectionSeparator() {
             style={{ color: '#8A7A6A' }}
           >
             Златна Фирма 2025
-          </p>
-          <span style={{ color: '#3A3028', height: '24px' }}>|</span>
-          <p
-            className="text-xs font-semibold tracking-[0.15em] uppercase px-8 flex-1"
-            style={{ color: '#8A7A6A' }}
-          >
-            1-во място здравеопазване
-          </p>
-          <span style={{ color: '#3A3028', height: '24px' }}>|</span>
-          <p
-            className="text-xs font-semibold tracking-[0.15em] uppercase px-8 flex-1"
-            style={{ color: '#8A7A6A' }}
-          >
-            Хасково & Кърджали
           </p>
         </div>
       </div>

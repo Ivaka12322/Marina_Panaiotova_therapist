@@ -1,6 +1,20 @@
 import { Phone, MessageCircle, Award } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
+const FacebookIcon = ({ size = 14 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+  </svg>
+);
+
+const bioText = [
+  'Казвам се Марина Панайотова и съм магистър психолог, психотерапевт, сертифициран психоаналитик и сексолог с практика в областта на тревожно-депресивните разстройства, личностното развитие, работата с травма и неврологичната рехабилитация.',
+  'Работя на границата между психотерапията и невронауката, защото вярвам, че устойчивата промяна настъпва, когато работим едновременно с психиката и мозъка.',
+  'Създател съм на Calm Override — първият метод в България за реконструкция на мислите при тревожност и паник атаки.',
+  'Автор съм на две книги и основател на The Young Therapist Academy — менторска академия за начинаещи психолози.',
+  'Работя с уважение и без осъждане. Хората, които идват при мен, вече са достатъчно строги към себе си. Аз съм тук с една цел — да се чувстваш по-добре в собствения си живот.',
+];
+
 export default function About() {
   const leftRef  = useScrollReveal(0);
   const rightRef = useScrollReveal(120);
@@ -11,7 +25,7 @@ export default function About() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 items-start">
 
-          {/* Left — text in placeholder box */}
+          {/* Left — bio text */}
           <div
             ref={leftRef}
             className="p-6 lg:p-10 rounded-2xl"
@@ -27,18 +41,27 @@ export default function About() {
               </span>
             </h2>
 
-            <div className="space-y-4 mb-6 lg:mb-9" style={{ color: '#4A3D30', lineHeight: '1.85' }}>
-              <p className="text-[14px] lg:text-[17px]">
-                В практиката си виждам нещо много важно: хората рядко идват при мен, защото са „слаби". Те идват, защото твърде дълго са носили всичко сами. <strong style={{ color: '#1A1610' }}>Функционирали са. Издържали са. Усмихвали са.</strong>
-              </p>
-              <p className="text-[14px] lg:text-[17px]">
-                И в един момент тялото и психиката им просто са започнали да казват: <em style={{ color: '#1A1610' }}>„Повече не мога така."</em>
-              </p>
+            {/* Photo — visible on mobile above text, on desktop inside the card */}
+            <div className="mb-6 rounded-xl overflow-hidden lg:hidden" style={{ maxHeight: '320px' }}>
+              <img
+                src="/image.png"
+                alt="Марина Панайотова"
+                className="w-full object-cover object-top"
+                style={{ maxHeight: '320px' }}
+              />
             </div>
 
-            {/* Credential tags - hidden on mobile, visible on desktop */}
+            <div className="space-y-4 mb-6 lg:mb-9" style={{ color: '#4A3D30', lineHeight: '1.85' }}>
+              {bioText.map((para, i) => (
+                <p key={i} className="text-[14px] lg:text-[16px]">
+                  {para}
+                </p>
+              ))}
+            </div>
+
+            {/* Credential tags */}
             <div className="hidden lg:flex flex-wrap gap-2">
-              {['Магистър психолог', 'Психоаналитик', 'Сексолог', 'Специалист по електротерапия'].map((tag) => (
+              {['Магистър психолог', 'Психотерапевт', 'Психоаналитик', 'Сексолог', 'Специалист по електротерапия'].map((tag) => (
                 <span
                   key={tag}
                   className="px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide"
@@ -54,20 +77,24 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right — awards + CTAs */}
+          {/* Right — photo + awards + CTAs */}
           <div ref={rightRef} className="lg:sticky lg:top-24 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto">
+
+            {/* Photo — desktop only */}
+            <div className="hidden lg:block mb-6 rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="/image.png"
+                alt="Марина Панайотова"
+                className="w-full object-cover object-top"
+                style={{ maxHeight: '360px' }}
+              />
+            </div>
+
             {/* Mobile: Compact CTA layout */}
             <div className="space-y-3 lg:hidden mb-6">
-              {/* Awards - mobile compact view */}
               {[
-                {
-                  img: '/Златна_Фирма_2025_image.jpg',
-                  title: 'Златна Фирма 2025',
-                },
-                {
-                  img: '/Орхи_Здраве_2024_&_2025_image.jpg',
-                  title: 'Орхи Здраве 2024 & 2025',
-                },
+                { img: '/Златна_Фирма_2025_image.jpg', title: 'Златна Фирма 2025' },
+                { img: '/Орхи_Здраве_2024_&_2025_image.jpg', title: 'Орхи Здраве 2024 & 2025' },
               ].map((award) => (
                 <div
                   key={award.title}
@@ -84,7 +111,6 @@ export default function About() {
                 </div>
               ))}
 
-              {/* Phone CTA - Full width solid button */}
               <a
                 href="tel:+359899199526"
                 className="flex items-center justify-center gap-3 w-full py-3.5 px-6 rounded-xl text-white font-semibold text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
@@ -94,7 +120,6 @@ export default function About() {
                 Обади ми се
               </a>
 
-              {/* Social buttons - 2 columns */}
               <div className="grid grid-cols-2 gap-2.5">
                 <a
                   href="viber://chat?number=+359899199526"
@@ -114,15 +139,13 @@ export default function About() {
                 </a>
               </div>
               <a
-                href="https://www.facebook.com/profile.php?id=61575199230748"
+                href="https://www.facebook.com/profile.php?id=61575199230748&locale=bg_BG"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl text-white text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
                 style={{ backgroundColor: '#6B5A48' }}
               >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                </svg>
+                <FacebookIcon size={14} />
                 Facebook
               </a>
             </div>
@@ -159,7 +182,6 @@ export default function About() {
                 ))}
               </div>
 
-              {/* Desktop CTAs */}
               <div className="pt-4 space-y-3">
                 <a
                   href="tel:+359899199526"
