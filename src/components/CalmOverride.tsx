@@ -54,7 +54,7 @@ export default function CalmOverride() {
                 src="/Picture_with_sofa.jpg"
                 alt="Марина Панайотова — Calm Override"
                 className="w-full object-cover object-right"
-                style={{ aspectRatio: '3/4' }}
+                style={{ aspectRatio: '2/4' }}
               />
               <div
                 className="absolute inset-0"
