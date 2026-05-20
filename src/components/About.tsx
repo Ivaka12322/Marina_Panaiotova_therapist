@@ -44,7 +44,7 @@ export default function About() {
             {/* Photo — visible on mobile above text, on desktop inside the card */}
             <div className="mb-6 rounded-xl overflow-hidden lg:hidden" style={{ maxHeight: '320px' }}>
               <img
-                src="/image.png"
+                src="/Hero_image.jpg"
                 alt="Марина Панайотова"
                 className="w-full object-cover object-top"
                 style={{ maxHeight: '320px' }}
