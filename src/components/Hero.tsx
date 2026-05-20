@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 w-full items-center">
 
           {/* ── Left: Text content ── */}
-          <div ref={contentRef} className="order-2 lg:order-1">
+          <div ref={contentRef} className="order-2 lg:order-1 text-center lg:text-left">
             <p
               className="text-[11px] font-bold tracking-[0.22em] uppercase mb-8"
               style={{ color: '#A07030' }}
@@ -43,7 +43,7 @@ export default function Hero() {
             </p>
 
             <p
-              className="text-base lg:text-[17px] mb-10 max-w-[420px]"
+              className="text-base lg:text-[17px] mb-10 max-w-[420px] mx-auto lg:mx-0"
               style={{ color: '#4A3D30', lineHeight: '1.8' }}
             >
               Психотерапевтични консултации и иновативна невро-стимулираща терапия, за ума и мозъка едновременно.

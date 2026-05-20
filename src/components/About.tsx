@@ -28,7 +28,7 @@ export default function About() {
           {/* Left — bio text */}
           <div
             ref={leftRef}
-            className="p-5 lg:p-8 rounded-2xl"
+            className="p-5 lg:p-8 rounded-2xl text-center lg:text-left"
             style={{ backgroundColor: '#FDFAF6', border: '1px solid #E0CEB4' }}
           >
             <h2
@@ -59,22 +59,6 @@ export default function About() {
               ))}
             </div>
 
-            {/* Credential tags */}
-            <div className="hidden lg:flex flex-wrap gap-2">
-              {['Магистър психолог', 'Психотерапевт', 'Психоаналитик', 'Сексолог', 'Специалист по електротерапия'].map((tag) => (
-                <span
-                  key={tag}
-                  className="px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide"
-                  style={{
-                    border: '1px solid rgba(160,112,48,0.4)',
-                    color: '#7A5020',
-                    backgroundColor: 'rgba(160,112,48,0.08)',
-                  }}
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
           </div>
 
           {/* Right — photo + awards + CTAs */}

@@ -32,7 +32,8 @@ export default function Header() {
           className="font-sans text-sm font-medium tracking-wide"
           style={{ color: '#1A1610' }}
         >
-          марина панайотова — психолог и психотерапевт
+          <span className="hidden sm:inline">марина панайотова — психолог и психотерапевт</span>
+          <span className="sm:hidden">марина панайотова</span>
         </a>
 
         <div className="flex items-center gap-5">

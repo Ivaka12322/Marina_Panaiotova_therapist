@@ -20,8 +20,8 @@ export default function CTASection() {
             className="text-base lg:text-[17px] mb-10 max-w-xl mx-auto"
             style={{ color: 'rgba(253,250,246,0.78)', lineHeight: '1.8' }}
           >
-            Обадете се, пишете ни на Viber или WhatsApp — отговарям лично.<br />
-            Всяка консултация е в пълна конфиденциалност.
+            Обадете се, пишете ни на Viber или WhatsApp — отговарям лично.
+            <span className="hidden md:inline"><br />Всяка консултация е в пълна конфиденциалност.</span>
           </p>
 
           <div className="flex flex-wrap justify-center gap-3">
