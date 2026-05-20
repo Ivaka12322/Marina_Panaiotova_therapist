@@ -67,7 +67,7 @@ export default function About() {
             {/* Photo — desktop only */}
             <div className="hidden lg:block mb-6 rounded-2xl overflow-hidden">
               <img
-                src="/image.png"
+                src="/Hero_image.jpg"
                 alt="Марина Панайотова"
                 className="w-full object-cover object-top"
                 style={{ maxHeight: '360px' }}
