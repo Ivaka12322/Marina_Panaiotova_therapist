@@ -62,7 +62,7 @@ export default function About() {
           </div>
 
           {/* Right — photo + awards + CTAs */}
-          <div ref={rightRef} className="lg:sticky lg:top-24 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto">
+          <div ref={rightRef}>
 
             {/* Photo — desktop only */}
             <div className="hidden lg:block mb-6 rounded-2xl overflow-hidden">
@@ -193,6 +193,16 @@ export default function About() {
                     WhatsApp
                   </a>
                 </div>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61575199230748&locale=bg_BG"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full py-3 px-5 rounded-xl text-white text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
+                  style={{ backgroundColor: '#1877F2' }}
+                >
+                  <FacebookIcon size={14} />
+                  Последвай ни във Facebook
+                </a>
               </div>
             </div>
           </div>

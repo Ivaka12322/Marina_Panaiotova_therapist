@@ -12,19 +12,18 @@ import Locations from './components/Locations';
 import FAQ from './components/FAQ';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
-import StickyBar from './components/StickyBar';
 
 export default function App() {
   return (
-    <div className="font-sans pb-12">
+    <div className="font-sans">
       <Header />
       <main>
         <Hero />
         <SectionSeparator />
         <About />
         <HowIHelp />
-        <ConcreteProblems />
         <Electrotherapy />
+        <ConcreteProblems />
         <CalmOverride />
         <Books />
         <YoungTherapistAcademy />
@@ -33,7 +32,6 @@ export default function App() {
         <CTASection />
       </main>
       <Footer />
-      <StickyBar />
     </div>
   );
 }
