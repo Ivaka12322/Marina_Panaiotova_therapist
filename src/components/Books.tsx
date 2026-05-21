@@ -72,7 +72,7 @@ export default function Books() {
                 style={{ backgroundColor: '#F0E6D4', aspectRatio: '16/7' }}
               >
                 <img
-                  src={book.image}
+                  src="/Book_1.jpg"
                   alt={book.imageAlt}
                   className="w-full h-full object-contain p-4 lg:p-8"
                   loading="lazy"
