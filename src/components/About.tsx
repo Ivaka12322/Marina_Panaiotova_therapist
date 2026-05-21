@@ -44,7 +44,7 @@ export default function About() {
             {/* Photo — visible on mobile above text, on desktop inside the card */}
             <div className="mb-6 rounded-xl overflow-hidden lg:hidden" style={{ maxHeight: '320px' }}>
               <img
-                src="/Hero_image.jpg"
+                src="/About_me_pic.jpg"
                 alt="Марина Панайотова"
                 className="w-full object-cover object-top"
                 style={{ maxHeight: '320px' }}
@@ -67,7 +67,7 @@ export default function About() {
             {/* Photo — desktop only */}
             <div className="hidden lg:block mb-6 rounded-2xl overflow-hidden">
               <img
-                src="/Hero_image.jpg"
+                src="/About_me_pic.jpg"
                 alt="Марина Панайотова"
                 className="w-full object-cover object-top"
                 style={{ maxHeight: '360px' }}
