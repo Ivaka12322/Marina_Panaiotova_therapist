@@ -14,6 +14,7 @@ const books = [
     ],
     image: '/Book_1_no_bg.png',
     imageAlt: 'Книга — Когато тялото каже Стига',
+    mobileImageClass: 'p-1 lg:p-8',
   },
   {
     badge: 'За психолози и терапевти',
@@ -27,6 +28,7 @@ const books = [
     ],
     image: '/Book_2_no_bg.png',
     imageAlt: 'Книга — Когато теорията вече не е достатъчна',
+    mobileImageClass: 'p-4 lg:p-8',
   },
 ];
 
@@ -74,7 +76,7 @@ export default function Books() {
                 <img
                   src={book.image}
                   alt={book.imageAlt}
-                  className="w-full h-full object-contain p-4 lg:p-8"
+                  className={`w-full h-full object-contain ${book.mobileImageClass}`}
                   loading="lazy"
                 />
                 <div
