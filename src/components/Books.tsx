@@ -69,7 +69,7 @@ export default function Books() {
               {/* Book image */}
               <div
                 className="relative overflow-hidden"
-                style={{ backgroundColor: '#F0E6D4', aspectRatio: '15/7' }}
+                style={{ backgroundColor: '#F0E6D4', aspectRatio: '13/7' }}
               >
                 <img
                   src={book.image}
