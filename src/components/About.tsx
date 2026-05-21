@@ -198,7 +198,7 @@ export default function About() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-1.5 w-full py-2.5 px-4 rounded-xl text-white text-xs font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
-                  style={{ backgroundColor: '#1877F2' }}
+                  style={{ backgroundColor: '#6B5A48' }}
                 >
                   <FacebookIcon size={12} />
                   Последвай ни във Facebook
