@@ -65,12 +65,12 @@ export default function About() {
           <div ref={rightRef}>
 
             {/* Photo — desktop only */}
-            <div className="hidden lg:block mb-6 rounded-2xl overflow-hidden">
+            <div className="hidden lg:block mb-5 rounded-2xl overflow-hidden">
               <img
                 src="/About_me_pic.jpg"
                 alt="Марина Панайотова"
                 className="w-full object-cover object-top"
-                style={{ maxHeight: '360px' }}
+                style={{ maxHeight: '460px' }}
               />
             </div>
 
@@ -136,7 +136,7 @@ export default function About() {
 
             {/* Desktop: Awards + CTAs */}
             <div className="hidden lg:block">
-              <div className="space-y-4">
+              <div className="space-y-2.5">
                 {[
                   {
                     img: '/Златна_Фирма_2025_image.jpg',
@@ -151,45 +151,45 @@ export default function About() {
                 ].map((award) => (
                   <div
                     key={award.title}
-                    className="flex items-center gap-4 p-5 rounded-2xl"
+                    className="flex items-center gap-3 p-3.5 rounded-xl"
                     style={{ border: '1px solid #E0CEB4', backgroundColor: '#FDFAF6' }}
                   >
-                    <div className="w-11 h-11 rounded-lg overflow-hidden flex-shrink-0">
+                    <div className="w-9 h-9 rounded-lg overflow-hidden flex-shrink-0">
                       <img src={award.img} alt={award.title} className="w-full h-full object-cover" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="font-semibold text-sm" style={{ color: '#1A1610' }}>{award.title}</p>
-                      <p className="text-xs mt-0.5 truncate" style={{ color: '#7A6A58' }}>{award.sub}</p>
+                      <p className="font-semibold text-xs" style={{ color: '#1A1610' }}>{award.title}</p>
+                      <p className="text-[11px] mt-0.5 truncate" style={{ color: '#7A6A58' }}>{award.sub}</p>
                     </div>
-                    <Award size={18} className="flex-shrink-0" style={{ color: '#A07030' }} />
+                    <Award size={15} className="flex-shrink-0" style={{ color: '#A07030' }} />
                   </div>
                 ))}
               </div>
 
-              <div className="pt-4 space-y-3">
+              <div className="pt-3 space-y-2">
                 <a
                   href="tel:+359899199526"
-                  className="flex items-center justify-center gap-3 w-full py-4 px-8 rounded-xl text-white font-semibold text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+                  className="flex items-center justify-center gap-2 w-full py-3 px-6 rounded-xl text-white font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
                   style={{ backgroundColor: '#A07030' }}
                 >
-                  <Phone size={17} />
+                  <Phone size={14} />
                   Обади ми се
                 </a>
-                <div className="flex gap-3">
+                <div className="flex gap-2">
                   <a
                     href="viber://chat?number=+359899199526"
-                    className="flex items-center justify-center gap-2 flex-1 py-3 px-5 rounded-xl text-white text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
+                    className="flex items-center justify-center gap-1.5 flex-1 py-2.5 px-4 rounded-xl text-white text-xs font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
                     style={{ backgroundColor: '#8B6F47' }}
                   >
-                    <MessageCircle size={14} />
+                    <MessageCircle size={12} />
                     Viber
                   </a>
                   <a
                     href="https://wa.me/359899199526"
-                    className="flex items-center justify-center gap-2 flex-1 py-3 px-5 rounded-xl text-white text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
+                    className="flex items-center justify-center gap-1.5 flex-1 py-2.5 px-4 rounded-xl text-white text-xs font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
                     style={{ backgroundColor: '#7A6A58' }}
                   >
-                    <MessageCircle size={14} />
+                    <MessageCircle size={12} />
                     WhatsApp
                   </a>
                 </div>
@@ -197,10 +197,10 @@ export default function About() {
                   href="https://www.facebook.com/profile.php?id=61575199230748&locale=bg_BG"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full py-3 px-5 rounded-xl text-white text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
-                  style={{ backgroundColor: '#6B5A48' }}
+                  className="flex items-center justify-center gap-1.5 w-full py-2.5 px-4 rounded-xl text-white text-xs font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
+                  style={{ backgroundColor: '#1877F2' }}
                 >
-                  <FacebookIcon size={14} />
+                  <FacebookIcon size={12} />
                   Последвай ни във Facebook
                 </a>
               </div>
