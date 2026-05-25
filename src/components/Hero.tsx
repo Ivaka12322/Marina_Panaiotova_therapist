@@ -36,7 +36,7 @@ export default function Hero() {
             </h1>
 
             <p
-              className="text-[11px] font-bold tracking-[0.2em] uppercase mb-9"
+              className="text-[9.5px] tracking-[0.08em] sm:text-[11px] sm:tracking-[0.2em] font-bold uppercase mb-9"
               style={{ color: '#7A6A58' }}
             >
               Магистър психолог&nbsp;·&nbsp;Психотерапевт&nbsp;·&nbsp;Психоаналитик&nbsp;·&nbsp;Сексолог
