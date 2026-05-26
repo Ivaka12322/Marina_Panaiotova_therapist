@@ -11,7 +11,7 @@ export default function SectionSeparator() {
             className="text-xs font-semibold tracking-[0.15em] uppercase px-4 sm:px-6 flex-1"
             style={{ color: '#8A7A6A' }}
           >
-            Орхи Здраве 2024 & 2025
+            Орли Здраве 2024 & 2025
           </p>
           <span style={{ color: '#3A3028', height: '24px' }}>|</span>
           <p
@@ -28,7 +28,7 @@ export default function SectionSeparator() {
             className="text-xs font-semibold tracking-[0.15em] uppercase px-8 flex-1"
             style={{ color: '#8A7A6A' }}
           >
-            Орхи Здраве 2024 & 2025
+            Орли Здраве 2024 & 2025
           </p>
           <span style={{ color: '#3A3028', height: '24px' }}>|</span>
           <p
